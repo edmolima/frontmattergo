@@ -2,6 +2,7 @@
 
 `frontmattergo` is a Go package that provides a simple and efficient way to unmarshal YAML frontmatter from text content. Frontmatter is often used in Markdown files to include metadata or configuration at the beginning of the document.
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/edmolima/frontmattergo)](https://goreportcard.com/report/github.com/edmolima/frontmattergo)
 
 Package `frontmattergo` provides YAML frontmatter unmarshalling for Go.
 
