@@ -34,10 +34,10 @@ jobs:
         run: go vet ./...
 
       - name: Create Release
-      run: |
-        TAG_NAME=$(date +'%Y%m%d%H%M%S')  # Generate a timestamp as the release tag
-        git tag -a $TAG_NAME -m "Release $TAG_NAME"
-        git push origin $TAG_NAME
-      
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME=$(date +'%Y%m%d%H%M%S')  # Generate a timestamp as the release tag
+          git tag -a $TAG_NAME -m "Release $TAG_NAME"
+          git push origin $TAG_NAME
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
