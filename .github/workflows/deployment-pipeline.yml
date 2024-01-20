@@ -54,6 +54,3 @@ jobs:
           release_tag: ${{ steps.version_tag.outputs.TAG_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Get the release ID
-        run: echo "Release ID: ${{ steps.create_release.outputs.id }}"
