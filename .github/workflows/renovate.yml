@@ -1,0 +1,24 @@
+name: Renovate
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Run weekly on Sundays at midnight
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.21.5'
+
+      - name: Install Renovate
+        run: go get -u github.com/renovatebot/renovate/cmd/renovate
+
+      - name: Run Renovate
+        run: renovate --token ${{ secrets.GITHUB_TOKEN }}
